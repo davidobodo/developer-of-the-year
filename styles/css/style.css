@@ -25,6 +25,7 @@ a {
   height: 2px;
   background-color: #CA7501;
   transform: scaleX(0);
+  animation: removeUnderline 0.5s ease-in-out forwards alternate;
 }
 
 .nav {
@@ -33,15 +34,35 @@ a {
 }
 .nav__link:hover .underline {
   background-color: #CA7501;
-  animation: underline 0.5s ease-in-out;
+  animation: underline 0.5s ease-in-out forwards alternate;
 }
 .nav__logo {
   font-size: 2rem;
   font-weight: 800;
 }
 
-.section__title {
-  font-size: 5rem;
+.section__left-nav {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.section__details {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.section__details__title {
+  font-size: 18rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.section__right-nav {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
 }
 
 @keyframes underline {
@@ -51,6 +72,16 @@ a {
   }
   to {
     transform: scaleY(1);
+    transform-origin: left;
+  }
+}
+@keyframes removeUnderline {
+  from {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  to {
+    transform: scaleY(0);
     transform-origin: left;
   }
 }
