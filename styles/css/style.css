@@ -52,17 +52,28 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
 }
 .section__details__title {
   font-size: 18rem;
   text-transform: uppercase;
   white-space: nowrap;
 }
+.section__details__title span {
+  -webkit-text-stroke: 2px #CA7501;
+  color: transparent;
+}
 .section__right-nav {
   position: absolute;
   top: 50%;
   right: 0;
   transform: translateY(-50%) rotate(90deg);
+}
+
+.footer {
+  position: absolute;
+  bottom: 4rem;
+  right: 4rem;
 }
 
 @keyframes underline {
