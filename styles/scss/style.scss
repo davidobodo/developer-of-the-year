@@ -16,14 +16,54 @@ body{
     box-sizing: border-box;
 }
 
+a{
+    cursor: pointer;
+}
+
+.underline{
+    width: 100%;
+    height: 2px;
+    background-color:#CA7501;
+    transform: scaleX(0); 
+}
+
 .nav{
     display: flex;
     justify-content: space-between;
+
+    &__link{
+
+        &:hover{
+
+            .underline{
+                background-color: #CA7501;
+                animation: underline 0.5s ease-in-out ;
+            }
+        }
+
+    }
+
+    &__logo{
+        font-size: 2rem;
+        font-weight: 800;
+    }
 }
 
 .section{
 
     &__title{
         font-size: 5rem;
+    }
+}
+
+@keyframes underline{
+    from{
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+
+    to{
+        transform: scaleY(1);
+        transform-origin: left;
     }
 }
