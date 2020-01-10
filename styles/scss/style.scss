@@ -74,8 +74,17 @@ a{
             font-size: 18rem;
             text-transform: uppercase;
             white-space: nowrap;
-
-            span{
+            line-height: 12rem;
+            margin-bottom: 7rem;
+            
+            &__first-line{
+                background: -webkit-linear-gradient(#380000 25%, #CA7501 75%);
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                -webkit-background-clip: text;
+            }
+            
+            &__second-line{
                 -webkit-text-stroke: 2px #CA7501;
                 color: transparent;
             }
@@ -94,6 +103,23 @@ a{
     position: absolute;
     bottom: 4rem;
     right: 4rem;
+    display: flex;
+    align-items: center;
+
+    h4{
+        margin-right: 2rem;
+    }
+
+    &__arrow{
+        border: 2px solid;
+        border-radius: 50%;
+        font-size: 2rem;
+        width: 5rem;
+        height: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 @keyframes underline{
