@@ -47,8 +47,18 @@ a:hover:after {
 .section__left-nav {
   position: absolute;
   top: 50%;
-  left: -60px;
+  left: -190px;
   transform: translateY(-50%) rotate(-90deg);
+}
+.section__left-nav a {
+  margin-right: 4rem;
+}
+.section__left-nav .line {
+  display: inline-block;
+  border-top: 1px solid;
+  width: 15rem;
+  padding-bottom: 2px;
+  margin-right: 4rem;
 }
 .section__details {
   position: absolute;

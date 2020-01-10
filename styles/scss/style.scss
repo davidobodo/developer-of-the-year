@@ -59,8 +59,20 @@ a{
     &__left-nav{
         position: absolute;
         top: 50%;
-        left: -60px;
+        left: -190px;
         transform: translateY(-50%) rotate(-90deg);
+
+        a{
+            margin-right: 4rem;
+        }
+
+        .line{
+            display: inline-block;
+            border-top: 1px solid;
+            width: 15rem;
+            padding-bottom: 2px;
+            margin-right: 4rem;
+        }
     }
 
     &__details{
