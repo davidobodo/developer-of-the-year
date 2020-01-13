@@ -29,10 +29,13 @@ a:after {
   height: 2px;
   background-color: #CA7501;
   transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.5s ease-in-out;
 }
 a:hover:after {
   background-color: #CA7501;
-  animation: underline 0.5s ease-in-out forwards alternate;
+  transform-origin: right;
+  transform: scaleX(1);
 }
 
 .nav {
@@ -175,17 +178,6 @@ a:hover:after {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-@keyframes underline {
-  from {
-    transform: scaleX(0);
-    transform-origin: left;
-  }
-  to {
-    transform: scaleY(1);
-    transform-origin: left;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */
