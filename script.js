@@ -1,20 +1,20 @@
-const box = document.querySelector('.pins')
-const array = [...Array(36)];
+const box = document.querySelector('.nominees__pins')
+const array = [...Array(40)];
 
 const displayPins = () => {
     const container = array.map((arr, i) => {
         const number = i + 1;
-        if (number <= 18) {
-            if (number <= 9) {
-                return `<span style='transform:translate(${200 + (i * 20)}px, ${number * 20}px) rotate(${90 + (number * 10)}deg) '></span>`
+        if (number <= 20) {
+            if (number <= 10) {
+                return `<span style='transform:translate(${120 + (number * 12)}px, ${number * 12}px) rotate(${90 + (number * 9)}deg) '></span>`
             } else {
-                return `<span style='transform:translate(${540 - (number * 20)}px, ${number * 20}px) rotate(${90 + (number * 10)}deg) '></span>`
+                return `<span style='transform:translate(${120 + ((20 - number) * 12)}px, ${number * 12}px) rotate(${90 + (number * 9)}deg) '></span>`
             }
         } else {
-            if (number <= 27) {
-                return `<span style='transform:translate(${540 - (number * 20)}px,${360 - ((number - 18) * 20)}px) rotate(${90 + (number * 10)}deg)'></span>`
+            if (number <= 30) {
+                return `<span style='transform:translate(${(30 - number) * 12}px, ${240 - ((number - 20) * 12)}px) rotate(${90 + (number * 9)}deg)'></span>`
             } else {
-                return `<span style='transform:translate(${(number * 20) - 540}px, ${360 - ((number - 18) * 20)}px) rotate(${90 + (number * 10)}deg)'></span>`
+                return `<span style='transform:translate(${(number - 30) * 12}px, ${240 - ((number - 20) * 12)}px) rotate(${90 + (number * 9)}deg)'></span>`
 
             }
         }
@@ -22,7 +22,8 @@ const displayPins = () => {
 
     box.innerHTML = container;
 }
-displayPins();
+
+displayPins()
 
 const CLIENT_WIDTH = document.documentElement.clientWidth;
 const CLIENT_HEIGHT = document.documentElement.clientHeight;

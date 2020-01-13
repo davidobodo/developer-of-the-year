@@ -19,6 +19,7 @@ body{
 a{
     cursor: pointer;
     position: relative;
+    padding-bottom: 6px;
 
     &:after{
         content: "";
@@ -110,12 +111,20 @@ a{
         }
 
         .nominees{
-            position: relative;
-            border: 3px solid;
-            width: 360px;
+            position: absolute;
+            width: 275px;
+            height: 275px;
+            bottom: -250px;
+            left: 50%;
+            transform: translateX(-55%);
             margin: 0 auto;
 
-            .pins{
+            &__text{
+                position: absolute;
+                transform: translate(85px, 110px);
+            }
+
+            &__pins{
                 position: absolute;
 
                 span {

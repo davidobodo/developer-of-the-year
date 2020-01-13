@@ -19,6 +19,7 @@ body {
 a {
   cursor: pointer;
   position: relative;
+  padding-bottom: 6px;
 }
 a:after {
   content: "";
@@ -94,15 +95,22 @@ a:hover:after {
   margin-bottom: 4rem;
 }
 .section__details .nominees {
-  position: relative;
-  border: 3px solid;
-  width: 360px;
+  position: absolute;
+  width: 275px;
+  height: 275px;
+  bottom: -250px;
+  left: 50%;
+  transform: translateX(-55%);
   margin: 0 auto;
 }
-.section__details .nominees .pins {
+.section__details .nominees__text {
+  position: absolute;
+  transform: translate(85px, 110px);
+}
+.section__details .nominees__pins {
   position: absolute;
 }
-.section__details .nominees .pins span {
+.section__details .nominees__pins span {
   position: absolute;
   width: 30px;
   height: 1px;
