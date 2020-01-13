@@ -110,11 +110,18 @@ a{
             margin-bottom: 4rem;
         }
 
+        &__subtitle{
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-55%);
+        }
+
         .nominees{
             position: absolute;
             width: 275px;
             height: 275px;
-            bottom: -250px;
+            bottom: -290px;
             left: 50%;
             transform: translateX(-55%);
             margin: 0 auto;
@@ -147,6 +154,7 @@ a{
 
     &__image{
         position: absolute;
+        opacity: 0.5;
         transition: all;
         transition-duration: 0.5s;
     }
