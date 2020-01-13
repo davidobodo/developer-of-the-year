@@ -90,6 +90,22 @@ a:hover:after {
   margin-top: -10rem;
   margin-bottom: 7rem;
 }
+.section__details .nominees {
+  position: relative;
+  border: 3px solid;
+  width: 360px;
+  margin: 0 auto;
+}
+.section__details .nominees .pins {
+  position: absolute;
+}
+.section__details .nominees .pins span {
+  position: absolute;
+  width: 30px;
+  height: 1px;
+  background-color: #CA7501;
+  display: inline-block;
+}
 .section__right-nav {
   position: absolute;
   top: 50%;
