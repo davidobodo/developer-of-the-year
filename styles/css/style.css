@@ -91,7 +91,7 @@ a:hover:after {
   white-space: nowrap;
   opacity: 0.5;
   margin-top: -10rem;
-  margin-bottom: 7rem;
+  margin-bottom: 4rem;
 }
 .section__details .nominees {
   position: relative;
@@ -117,26 +117,28 @@ a:hover:after {
 }
 .section__image {
   position: absolute;
+  transition: all;
+  transition-duration: 0.5s;
 }
 .section .one {
   width: 200px;
   padding-top: 200px;
   left: 290px;
-  top: 260px;
+  top: 160px;
   transform: rotate(12deg);
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("https://images.unsplash.com/photo-1578553687873-81596280fce3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80");
   background-size: cover;
-  box-shadow: 24px 11px 16px 14px rgba(0, 0, 0, 0.25);
+  box-shadow: -8px 15px 70px 14px rgba(0, 0, 0, 0.6);
 }
 .section .two {
   width: 100px;
   padding-top: 100px;
   right: 420px;
-  top: 260px;
+  top: 250px;
   transform: rotate(-12deg);
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("https://images.unsplash.com/photo-1578762788347-3bd551e9c606?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=924&q=80");
   background-size: cover;
-  box-shadow: 24px 11px 16px 14px rgba(0, 0, 0, 0.25);
+  box-shadow: -8px 15px 70px 14px rgba(0, 0, 0, 0.6);
 }
 .section .three {
   width: 250px;
@@ -146,7 +148,7 @@ a:hover:after {
   transform: rotate(-15deg);
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("https://images.unsplash.com/photo-1558980394-da1f85d3b540?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80");
   background-size: cover;
-  box-shadow: 24px 11px 16px 14px rgba(0, 0, 0, 0.25);
+  box-shadow: -8px 15px 70px 14px rgba(0, 0, 0, 0.6);
 }
 .section .four {
   width: 100px;
@@ -156,7 +158,7 @@ a:hover:after {
   transform: rotate(15deg);
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("https://images.unsplash.com/photo-1578773729181-e2ac1c46d990?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=933&q=80");
   background-size: cover;
-  box-shadow: 24px 11px 16px 14px rgba(0, 0, 0, 0.25);
+  box-shadow: -8px 15px 70px 14px rgba(0, 0, 0, 0.6);
 }
 
 .footer {
