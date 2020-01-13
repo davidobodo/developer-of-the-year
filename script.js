@@ -22,4 +22,36 @@ const displayPins = () => {
 
     box.innerHTML = container;
 }
-displayPins()
+displayPins();
+
+const CLIENT_WIDTH = document.documentElement.clientWidth;
+const CLIENT_HEIGHT = document.documentElement.clientHeight;
+const DISPLACEMENT_VALUES = [50, 70, 50, 30,];
+
+
+const elements = document.querySelectorAll('[data-depth]');
+
+const handleMouseMove = (event) => {
+    elements.forEach(o => {
+        const { x, y } = computeDisplacement(event, o);
+        updateStyle(o, x, y);
+    })
+};
+
+const computeDisplacement = (event, element) => {
+    const { clientX: mouseX, clientY: mouseY } = event;
+
+    const displacementDepth = element.dataset.depth;
+    const displacementValue = DISPLACEMENT_VALUES[Number(displacementDepth) - 1];
+
+    const x = mouseX * displacementValue / CLIENT_WIDTH;
+    const y = mouseY * displacementValue / CLIENT_HEIGHT;
+
+    return { x, y };
+};
+
+const updateStyle = (element, x, y) => {
+    element.style.transform = `translate3d(${-x}px, ${-y}px, 0)`
+}
+
+document.addEventListener('mousemove', handleMouseMove);
