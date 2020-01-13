@@ -90,6 +90,45 @@ a:hover:after {
   right: 0;
   transform: translateY(-50%) rotate(90deg);
 }
+.section__image {
+  position: absolute;
+}
+.section .one {
+  width: 200px;
+  padding-top: 200px;
+  left: 290px;
+  top: 260px;
+  transform: rotate(12deg);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1578553687873-81596280fce3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80");
+  background-size: cover;
+}
+.section .two {
+  width: 100px;
+  padding-top: 100px;
+  right: 420px;
+  top: 260px;
+  transform: rotate(-12deg);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1578762788347-3bd551e9c606?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=924&q=80");
+  background-size: cover;
+}
+.section .three {
+  width: 250px;
+  padding-top: 250px;
+  left: 400px;
+  top: 650px;
+  transform: rotate(-15deg);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1558980394-da1f85d3b540?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80");
+  background-size: cover;
+}
+.section .four {
+  width: 100px;
+  padding-top: 100px;
+  right: 350px;
+  top: 650px;
+  transform: rotate(15deg);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1578773729181-e2ac1c46d990?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=933&q=80");
+  background-size: cover;
+}
 
 .footer {
   position: absolute;
