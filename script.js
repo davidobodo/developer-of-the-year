@@ -33,7 +33,7 @@ const ROTATION_ANGLE = [12, -12, -15, 15]
 
 const elements = document.querySelectorAll('[data-depth]');
 
-const handleMouseMove = (event) => {
+const handleMoveImages = (event) => {
     elements.forEach(o => {
         const { x, y, z } = computeDisplacement(event, o);
         updateStyle(o, x, y, z);
@@ -57,7 +57,7 @@ const updateStyle = (element, x, y, z) => {
     element.style.transform = `translate3d(${x}px, ${y}px, 0) rotate(${z}deg)`
 }
 
-document.addEventListener('mousemove', handleMouseMove);
+document.addEventListener('mousemove', handleMoveImages);
 
 //=======================================================
 //circle
@@ -112,6 +112,20 @@ const myCircle = list.map((item, i) => getPositionValues(i))
     })
     .join(' ');
 container.innerHTML = myCircle;
+
+
+//==========================================================
+//nominees hover effect
+//==========================================================
+const nominees = document.querySelector('.nominees');
+
+const handleMoveNomineesText = (event) => {
+    const { offsetX: x, offsetY: y } = event
+    event.stopPropagation();
+}
+
+nominees.addEventListener('mousemove', handleMoveNomineesText)
+
 
 
 
