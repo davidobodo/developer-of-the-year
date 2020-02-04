@@ -58,3 +58,63 @@ const updateStyle = (element, x, y, z) => {
 }
 
 document.addEventListener('mousemove', handleMouseMove);
+
+//=======================================================
+//circle
+//=======================================================
+const count = 40;
+let radius = 130;
+const list = new Array(count).fill(null);
+
+const getPositionValues = (index) => {
+    const increment = 360 / count;
+    const angle = index * increment;
+    const hypotenuse = radius;
+    const useInvertedFormula = Math.ceil(angle / 90) % 2;
+    const normalizedAngle = !!useInvertedFormula ? 90 - (angle % 90) : angle % 90;
+    let x;
+    let y;
+    if (normalizedAngle % 90 === 0) {
+        x = Math.sin(normalizedAngle * (Math.PI / 180)) * hypotenuse;
+    } else {
+        x = Math.cos(normalizedAngle * (Math.PI / 180)) * hypotenuse;
+    }
+    y = Math.sqrt(Math.pow(radius, 2) - Math.pow(x, 2));
+    const quadrant = angle % 90 === 0 ? Math.ceil(angle / 90) + 1 : Math.ceil(angle / 90);
+    let top;
+    let left;
+    switch (quadrant) {
+        case 1:
+        case 2:
+            left = radius + x;
+            break;
+        case 3:
+        case 4:
+            left = radius - x;
+            break;
+    }
+    switch (quadrant) {
+        case 1:
+        case 4:
+            top = radius - y;
+            break;
+        case 2:
+        case 3:
+            top = radius + y;
+            break;
+    }
+    return { angle, top, left }
+}
+const container = document.querySelector('.nominee__pins')
+const myCircle = list.map((item, i) => getPositionValues(i))
+    .map(({ top, left, angle }) => {
+        return `<div class="ball" style="transform: rotate(${angle}deg); top: ${top}px; left: ${left}px"></div>`
+    })
+    .join(' ');
+container.innerHTML = myCircle;
+
+
+
+
+
+

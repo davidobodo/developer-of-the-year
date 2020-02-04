@@ -133,14 +133,20 @@ a{
 
             &__pins{
                 position: absolute;
+                // width: 300px;
+                // height: 300px;
+                // border-radius: 150px;
+                // position: relative;
 
-                span {
-                    position: absolute;
-                    width: 30px;
-                    height: 1px;
-                    background-color: #CA7501;
-                    display: inline-block;
-                }
+                // span {
+                //     position: absolute;
+                //     width: 30px;
+                //     height: 1px;
+                //     background-color: #CA7501;
+                //     display: inline-block;
+                // }
+
+                
             }
         }
     }
@@ -225,6 +231,15 @@ a{
         justify-content: center;
         align-items: center;
     }
+}
+
+.ball{
+    position: absolute;
+    width: 2px;
+    height: 30px;
+    transform-origin: top;
+    background-color: #CA7501;
+    transition: all 1s ease-in-out;
 }
 
 
