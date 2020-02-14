@@ -109,8 +109,7 @@ a {
 .section__image {
   position: absolute;
   opacity: 0.5;
-  transition: all;
-  transition-duration: 1s; }
+  transition: all; }
 .section .one {
   width: 200px;
   padding-top: 200px;
